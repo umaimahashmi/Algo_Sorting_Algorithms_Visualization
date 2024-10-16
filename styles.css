@@ -1,0 +1,182 @@
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  background-color: #0e1217; /* Dark purple background */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 400px; /* Adjust as needed */
+  width: 80%; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #ff6b6b, #f06595);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Highlighted bars for swaps/overwrites */
+.bar.swap {
+  background-color: red;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+}
+
+/* Gradient Heading */
+.gradient-text {
+  font-size: 3.7rem;
+  background: linear-gradient(45deg, #ff0080, #8000ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.sub-heading {
+  font-size: 1.5rem;
+  color: #ddd;
+  margin-bottom: 40px;
+  opacity: 0.85;
+  letter-spacing: 2px;
+  animation: slideUp 1.5s ease-in-out;
+}
+
+/* Button Container */
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  justify-items: center;
+}
+
+/* Modern Button Styles */
+.cta-button {
+  background: linear-gradient(135deg, #ff0080, #8000ff);
+  color: #fff;
+  border: none;
+  padding: 15px 20px; /* Adjusted padding for less roundness */
+  font-size: 1rem;
+  border-radius: 10px; /* Less round */
+  cursor: pointer;
+  box-shadow: 0px 10px 20px rgba(128, 0, 255, 0.4);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  width: 220px; /* Increased width */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button Hover Effect */
+.cta-button:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 25px rgba(255, 0, 128, 0.6),
+    0px 20px 30px rgba(128, 0, 255, 0.5);
+}
+
+/* Button Glow Effect */
+.cta-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all 0.75s ease;
+  opacity: 0;
+}
+
+.cta-button:hover::after {
+  opacity: 1;
+  width: 150%;
+  height: 150%;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#container {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bar {
+  width: 20px;
+  background-color: #8e44ad;
+  margin: 2.5px;
+}
+
+button {
+  background-color: #6c5ce7; /* Soft purple shade */
+  color: rgb(60, 60, 60);
+  padding: 12px 40px;
+  font-size: 15px;
+  font-weight: 100;
+  border: none;
+  border-radius: 2px; /* Slightly rounded corners */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #5a4dbf; /* Darker purple on hover */
+  transform: translateY(-3px); /* Lifts button slightly */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+}
+
+button:active {
+  background-color: #4b3e9f; /* Even darker purple when clicked */
+  transform: translateY(0); /* Returns to original position */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.4); /* Soft focus ring */
+}
